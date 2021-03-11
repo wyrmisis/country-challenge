@@ -1,0 +1,42 @@
+.countryCard {
+  background-color: var(--light-elements);
+  box-shadow: var(--light-shadow);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.countryCard:hover {
+  cursor: pointer;
+}
+
+.countryCard main {
+  padding: .5rem 1rem;
+  font-size: .875rem;
+}
+
+.countryCard main h1 {
+  font-size: 1.125rem;
+}
+
+:global(.dark) .countryCard {
+  background-color: var(--dark-elements);
+  box-shadow: var(--dark-shadow);
+}
+
+.countryCard img {
+  object-fit: cover;
+  width: 100%;
+  height: 360px;
+}
+
+@media (min-width: 720px) {
+  .countryCard img {
+    height: 260px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .countryCard img {
+    height: 200px;
+  }
+}
