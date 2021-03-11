@@ -1,24 +1,26 @@
 import { FunctionalComponent, h } from 'preact';
 import { Link } from 'preact-router/match';
+import { Moon } from 'preact-feather';
 import style from './style.css';
 
-const Header: FunctionalComponent = () => {
-    return (
-        <header class={style.header}>
-            <h1>Preact App</h1>
-            <nav>
-                <Link activeClassName={style.active} href="/">
-                    Home
-                </Link>
-                <Link activeClassName={style.active} href="/profile">
-                    Me
-                </Link>
-                <Link activeClassName={style.active} href="/profile/john">
-                    John
-                </Link>
-            </nav>
-        </header>
-    );
+interface HeaderProps {
+  onDarkModeToggle: () => void;
+}
+
+const Header: FunctionalComponent<HeaderProps> = ({ onDarkModeToggle }) => {
+  return (
+    <header class={style.header}>
+      <h1>
+        <Link href="/">
+          Where in the World?
+        </Link>
+      </h1>
+      <button onClick={onDarkModeToggle}>
+        <Moon size={18} />
+        <span>Dark Mode</span>
+      </button>
+    </header>
+  );
 };
 
 export default Header;

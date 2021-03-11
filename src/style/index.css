@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+	--light-background: #fafafa;
+	--light-elements: #ffffff;
+	--light-text-color: #111517;
+	--light-input-color: #858585;
+	--light-shadow: #44444477 0px 3px 5px;
+
+	--dark-background: #202c37;
+	--dark-elements: #2b3945;
+	--dark-text-color: #ffffff;
+	--dark-input-color: var(--dark-elements);
+	--dark-shadow: #11111177 0px 3px 5px;
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-size: 16px; /* set base size for using REMs elsewhere */
+	font-family: 'Nunito Sans', 'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
-	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -16,5 +31,13 @@ html, body {
 }
 
 #app {
-	height: 100%;
+	min-height: 100%;
+
+	background: var(--light-background);
+	color: var(--light-text-color);
+}
+
+#app.dark {
+	background: var(--dark-background);
+	color: var(--dark-text-color);
 }

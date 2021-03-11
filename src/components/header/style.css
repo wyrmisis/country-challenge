@@ -3,46 +3,49 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 56px;
-	padding: 0;
-	background: #673AB7;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	padding: 2rem 0;
+	background: var(--light-elements);
+	box-shadow: var(--light-shadow);
 	z-index: 50;
+	display: flex;
+	justify-content: space-between;
+}
+
+:global(.dark) .header {
+	background: var(--dark-elements);
+	box-shadow: var(--dark-shadow);
+}
+
+.header h1,
+.header button {
+	margin: 0 1rem;
 }
 
 .header h1 {
-	float: left;
-	margin: 0;
-	padding: 0 15px;
-	font-size: 24px;
-	line-height: 56px;
-	font-weight: 400;
-	color: #FFF;
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: inherit;
 }
 
-.header nav {
-	float: right;
-	font-size: 100%;
-}
-
-.header nav a {
-	display: inline-block;
-	height: 56px;
-	line-height: 56px;
-	padding: 0 15px;
-	min-width: 50px;
-	text-align: center;
-	background: rgba(255,255,255,0);
+.header h1 a {
+	color: inherit;
 	text-decoration: none;
-	color: #FFF;
-	will-change: background-color;
 }
 
-.header nav a:hover,
-.header nav a:active {
-	background: rgba(0,0,0,0.2);
+.header button {
+	font-size: 1rem;
+	font-weight: 600;
+	background: transparent;
+	border: none;
+	color: inherit;
+	display: flex;
+	align-items: center;
 }
 
-.header nav a.active {
-	background: rgba(0,0,0,0.4);
+.header button:hover {
+	cursor: pointer;
+}
+
+.header button svg {
+	margin-right: .6rem;
 }
