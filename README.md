@@ -1,5 +1,9 @@
 # country-challenge
 
+## Intent
+
+This application displays a list of countries from [restcountries.eu](https://restcountries.eu/), with the ability to filter by name and region. You can also click into a country to learn more about it.
+
 ## CLI Commands
 *   `npm install`: Installs dependencies
 
@@ -16,4 +20,4 @@
     your tests
 
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+For detailed explanation on how things work, checkout the [Preact CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
