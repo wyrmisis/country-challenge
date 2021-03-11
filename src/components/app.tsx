@@ -11,7 +11,7 @@ const App: FunctionalComponent = () => {
     const [isDark, setIsDark] = useState<boolean>(false);
 
     return (
-        <div id="app" class={isDark && 'dark'}>
+        <div id="app" class={isDark ? 'dark' : ''}>
             <Header onDarkModeToggle={(): void => setIsDark(!isDark)} />
             <Router>
                 <Route path="/" component={Home} />

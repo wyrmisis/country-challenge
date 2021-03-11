@@ -13,7 +13,7 @@ const NameFilter: FunctionalComponent<NameFilterProps> = ({ onChange, disabled }
         <Search size={18} />
         <input
           placeholder='Search for a country...'
-          onKeyUp={(event: Event) => onChange((event.target as HTMLInputElement).value)}
+          onKeyUp={(event: Event): void => onChange((event.target as HTMLInputElement).value)}
           disabled={disabled} />
       </div>
   );

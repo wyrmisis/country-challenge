@@ -15,6 +15,11 @@ interface CountryProps {
   countryId: string;
 }
 
+type Border = {
+  name: string;
+  alpha2Code: string;
+};
+
 const doNavigation = (countryCode: string): boolean =>
   route(`/country/${countryCode}`);
 
@@ -41,6 +46,14 @@ const Country: FunctionalComponent<CountryProps> = ({ countryId }) => {
 
   if (!country) return null;
 
+  const borderButtonMap = (border: Border): h.JSX.Element => (
+    <button
+      class={style.border}
+      onClick={(): boolean => doNavigation(border.alpha2Code)}>
+      {border.name}
+    </button>
+  );
+
   return (
     <div class={style.country}>
       <button
@@ -62,20 +75,14 @@ const Country: FunctionalComponent<CountryProps> = ({ countryId }) => {
                <DefinitionItem label="Capital" value={country.capital} />
             </div>
             <div>
-               <DefinitionItem label="Top Level Domain" value={country.topLevelDomain} />
+               <DefinitionItem label="Top Level Domain" value={country.topLevelDomain.join(', ')} />
                <DefinitionItem label="Currencies" value={currencyString(country.currencies)} />
                <DefinitionItem label="Languages" value={languageString(country.languages)} />
             </div>
           </div>
           <div class={style.borders}>
             <span>Border Countries:</span>
-              {country.borders.map((border: CountryType) => (
-                <button
-                  class={style.border}
-                  onClick={(): boolean => doNavigation(border.alpha2Code)}>
-                  {border.name}
-                </button>
-              ))}
+              {(country.borders as Border[]).map(borderButtonMap)}
           </div>
         </div>
       </main>

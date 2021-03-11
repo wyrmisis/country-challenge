@@ -14,7 +14,7 @@ const doNavigation = (countryCode: string): boolean =>
 
 const CountryCard: FunctionalComponent<CountryCardProps> = ({ country }) => {
   return (
-     <div class={style.countryCard} onClick={(): void => doNavigation(country.alpha2Code)} >
+     <div class={style.countryCard} onClick={(): boolean => doNavigation(country.alpha2Code)} >
        <header>
          <img src={country.flag} />
        </header>
