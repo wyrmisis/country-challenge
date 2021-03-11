@@ -1,0 +1,15 @@
+.regionFilter {
+  padding: 1.25rem 2rem;
+  width: 100%;
+  border: none;
+  font-size: .875rem;
+  box-shadow: var(--light-shadow);
+  background: var(--light-elements);
+  color: var(--light-text-color);
+}
+
+:global(.dark) .regionFilter {
+  box-shadow: var(--dark-shadow);
+  background: var(--dark-elements);
+  color: var(--dark-text-color);
+}

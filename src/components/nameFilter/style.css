@@ -1,0 +1,37 @@
+.nameFilter {
+  padding: 1.25rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--light-shadow);
+  background: var(--light-elements);
+  color: var(--light-text-color);
+}
+
+:global(.dark) .nameFilter {
+  box-shadow: var(--dark-shadow);
+  background: var(--dark-elements);
+  color: var(--dark-text-color);
+}
+
+.nameFilter svg {
+  margin-right: .6rem;
+}
+
+.nameFilter input {
+  color: inherit;
+  border: none;
+  font-size: .875rem;
+  background: transparent;
+  width: calc(100% - 18px);
+}
+
+.nameFilter input:focus {
+  outline: none;
+}
+
+.nameFilter input::-ms-input-placeholder,
+.nameFilter input:-ms-input-placeholder,
+.nameFilter input::placeholder {
+  color: inherit;
+}
