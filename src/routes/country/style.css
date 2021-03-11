@@ -1,0 +1,104 @@
+.country {
+  padding: 166px 20px;
+  min-height: 100%;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.back {
+  margin-bottom: 56px;
+  font-size: 1.2rem;
+  padding: 1rem 2.375rem;
+  display: flex;
+  align-content: center;
+}
+
+.back svg {
+  margin-right: .6rem;
+}
+
+.country img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.country button {
+  box-shadow: var(--light-shadow);
+  background: var(--light-elements);
+  border-radius: 4px;
+  color: inherit;
+  border: none;
+}
+
+.country button:hover {
+  cursor: pointer;
+}
+
+:global(.dark) .country button {
+  box-shadow: var(--dark-shadow);
+  background: var(--dark-elements);
+}
+
+.borders {
+  line-height: 3.4
+}
+
+.borders span {
+  font-weight: 600;
+}
+
+.border {
+  margin: 0 .5rem;
+  padding: 1rem 1rem;
+  min-width: 6rem;
+}
+
+@media (min-width: 600px) {
+  .details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .details > div {
+    width: 50%;
+  }
+
+  .borders {
+    line-height: 1.8;
+  }
+
+  .border {
+    margin: 0 .5rem;
+    padding: .25rem 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .country main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .country img {
+    margin-right: 30px;
+  }
+
+  .country main > div {
+    width: 45%;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .country img {
+    margin-right: 70px;
+  }
+
+  .country main > div {
+    margin-left: 70px;
+  }
+}
