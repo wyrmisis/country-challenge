@@ -3,7 +3,6 @@ import { Route, Router } from 'preact-router';
 import { useState } from 'preact/hooks';
 
 import Home from '../routes/home';
-import Profile from '../routes/profile';
 import NotFoundPage from '../routes/notfound';
 import Header from './header';
 
@@ -15,8 +14,6 @@ const App: FunctionalComponent = () => {
             <Header onDarkModeToggle={(): void => setIsDark(!isDark)} />
             <Router>
                 <Route path="/" component={Home} />
-                <Route path="/profile/" component={Profile} user="me" />
-                <Route path="/profile/:user" component={Profile} />
                 <NotFoundPage default />
             </Router>
         </div>
