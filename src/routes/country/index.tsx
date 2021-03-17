@@ -80,10 +80,10 @@ const Country: FunctionalComponent<CountryProps> = ({ countryId }) => {
                <DefinitionItem label="Languages" value={languageString(country.languages)} />
             </div>
           </div>
-          <div class={style.borders}>
+          {country.borders?.length && <div class={style.borders}>
             <span>Border Countries:</span>
               {(country.borders as Border[]).map(borderButtonMap)}
-          </div>
+          </div>}
         </div>
       </main>
     </div>
